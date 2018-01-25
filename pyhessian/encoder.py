@@ -136,14 +136,14 @@ class Encoder(object):
 
     @encoder_for(type(None))
     def encode_null(self, _):
-        return 'N'
+        return b'N'
 
     @encoder_for(bool)
     def encode_boolean(self, value):
         if value:
-            return 'T'
+            return b'T'
         else:
-            return 'F'
+            return b'F'
 
     @encoder_for(int)
     def encode_int(self, value):
